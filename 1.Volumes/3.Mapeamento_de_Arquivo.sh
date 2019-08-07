@@ -11,7 +11,7 @@ clear >$(tty)
 printf " \ndocker \n"
 printf " run                                       ${GREEN} # Sobe um novo Container${NC}\n"
 printf " -it                                       ${GREEN} # Modo Interativo${NC}\n"
-printf " --rm                                      ${GREEN} # Remove o Container ao sair o Terminal${NC}\n"
+printf " --rm                                      ${GREEN} # Remove o Container ao sair do Terminal${NC}\n"
 printf " -v $(pwd)/config.json:/config/config.json ${GREEN} # Mapeia o arquivo 'config.json' do Host para o arquivo '/config/config.json' no Container${NC}\n"
 printf " ubuntu                                    ${GREEN} # Imagem composta por REPOSITORY:TAG${NC}\n"
 printf " bash                                      ${GREEN} # Comando a ser executado${NC}\n\n"
