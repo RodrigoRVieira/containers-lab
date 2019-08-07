@@ -10,7 +10,6 @@ clear >$(tty)
 
 printf " \ndocker \n"
 printf " run                                                          ${GREEN} # Sobe um novo Container${NC}\n"
-printf " -d                                                           ${GREEN} # 'Desatacha' o Terminal do Container, retornando ao Host${NC}\n"
 printf " --name container_4                                           ${GREEN} # Determina o ID do Container${NC}\n"
 printf " --hostname container_4                                       ${GREEN} # Determina o nome do Host no Container${NC}\n"
 printf " --network host                                               ${GREEN} # Conecta o Container na rede do Host${NC}\n"
@@ -19,4 +18,4 @@ printf " nginx                                                        ${GREEN} #
 
 printf "docker run -d --name container_4 -h container_4 --network host -v $(pwd)/container_4.html:/usr/share/nginx/html/index.html nginx"
 
-docker run -d --name container_4 -h container_4 --network host -v $(pwd)/container_4.html:/usr/share/nginx/html/index.html nginx
+docker run --name container_4 -h container_4 --network host -v $(pwd)/container_4.html:/usr/share/nginx/html/index.html nginx
