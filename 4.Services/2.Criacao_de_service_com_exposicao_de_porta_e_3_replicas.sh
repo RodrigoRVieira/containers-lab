@@ -22,6 +22,6 @@ printf "docker service create --name nginx -p 80:80 --replicas 3 nginx \n\n"
 
 docker service create --name nginx -p 80:80 --replicas 3 nginx
 
-echo "<html><b>This is Container #1</b><br><br><img src=\"images/gif1.webp\"></html>" > index1.html && docker cp ./index1.html $(docker ps -f name=nginx.1 -q):/usr/share/nginx/html/index.html && docker cp ./images/gif1.webp $(docker ps -f name=nginx.1 -q):/usr/share/nginx/html/images/gif1.webp
-echo "<html><b>This is Container #2</b><br><br><img src=\"images/gif2.webp\"></html>" > index2.html && docker cp ./index2.html $(docker ps -f name=nginx.2 -q):/usr/share/nginx/html/index.html && docker cp ./images/gif2.webp $(docker ps -f name=nginx.2 -q):/usr/share/nginx/html/images/gif2.webp
-echo "<html><b>This is Container #3</b><br><br><img src=\"images/gif3.gif\"></html>" > index3.html && docker cp ./index3.html $(docker ps -f name=nginx.3 -q):/usr/share/nginx/html/index.html && docker cp ./images/gif3.gif $(docker ps -f name=nginx.3 -q):/usr/share/nginx/html/images/gif3.gif
+echo "<html><b>This is Container #1</b><br><br><img src=\"gif.webp\"></html>" > index1.html && docker cp ./index1.html $(docker ps -f name=nginx.1 -q):/usr/share/nginx/html/index.html && docker cp ./images/gif1.webp $(docker ps -f name=nginx.1 -q):/usr/share/nginx/html/gif.webp
+echo "<html><b>This is Container #2</b><br><br><img src=\"gif.webp\"></html>" > index2.html && docker cp ./index2.html $(docker ps -f name=nginx.2 -q):/usr/share/nginx/html/index.html && docker cp ./images/gif2.webp $(docker ps -f name=nginx.2 -q):/usr/share/nginx/html/gif.webp
+echo "<html><b>This is Container #3</b><br><br><img src=\"gif.webp\"></html>" > index3.html && docker cp ./index3.html $(docker ps -f name=nginx.3 -q):/usr/share/nginx/html/index.html && docker cp ./images/gif3.webp $(docker ps -f name=nginx.3 -q):/usr/share/nginx/html/gif.webp
