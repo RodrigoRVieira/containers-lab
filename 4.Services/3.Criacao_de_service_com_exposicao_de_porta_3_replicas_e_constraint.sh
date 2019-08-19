@@ -24,5 +24,3 @@ printf "docker service create --name nginx -p 80:80 --replicas 3 --constraint 'n
 docker service create --name nginx -p 80:80 --replicas 3 --constraint 'node.role==manager' nginx
 
 ./customize_nginx.sh
-
-rm *.html

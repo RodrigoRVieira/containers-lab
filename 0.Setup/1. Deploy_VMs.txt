@@ -1,0 +1,30 @@
+#1. 2 x Ubuntu Server 18.04 LTS
+#	1.1 Size: Standard B2s (2 vcpus, 4 GiB memory)
+#	1.2 Region: Brazil South
+#	1.3 Overview / Networking / Configuration / Assignment: Static / Assign DNS label
+#	1.4 Networking
+#	1.5 Inbound rules: 
+#		- Priority 			/ Name 				/ Destination port ranges
+#		- 100 				/ Docker_Swarm 		/ 2377,7946,4789
+#		- 110				/ Portainer_SSH		/ 9000
+#		- 300				/ HTTP				/ 80
+#		- 320				/ HTTPS				/ 443
+#		- 340				/ SSH				/ 22
+#		- 360				/ Voting_App		/ 5000,5001
+#		- 370				/ Selenium_Grid		/ 4444
+#		- 390				/ VNC				/ 5900,5901
+#		- 400				/ Selenoid			/ 8080
+#	1.6 Operations / Auto-shutdown: Disable || Postpone
+
+#Download do Script de instalação do Docker + execução do Script
+sudo curl -fSsl https://get.docker.com/ | sh
+
+#Adiciona o usuário logado ao grupo do Docker
+sudo usermod -aG docker $USER
+
+#Criação de alias para o comando 'Docker'
+vi ~/.bashrc
+#Adicionar 'alias d=docker $*' ao final do arquivo sem as aspas
+
+#Adiciona o modo de execução aos Scripts
+chmod +x $(find  ./ -name *.sh)

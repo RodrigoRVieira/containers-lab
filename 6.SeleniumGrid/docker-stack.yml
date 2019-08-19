@@ -1,0 +1,41 @@
+version: '3.7'
+
+services:
+  hub:
+   image: selenium/hub:3.141.59-titanium
+   ports:
+     - "80:4444"
+   environment:
+     GRID_MAX_SESSION: 50
+     GRID_BROWSER_TIMEOUT: 120
+     GRID_TIMEOUT: 55
+
+  chrome:
+    image: selenium/node-chrome-debug:3.141.59-titanium
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+     - "5900:5900"
+    environment:
+      HUB_HOST: hub
+      HUB_PORT: 4444
+      NODE_MAX_INSTANCES: 5
+      NODE_MAX_SESSION: 5
+    deploy:
+        mode: global
+    entrypoint: bash -c 'SE_OPTS="-host $$HOSTNAME" /opt/bin/entry_point.sh'
+
+  firefox:
+    image: selenium/node-firefox-debug:3.141.59-titanium
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+     - "5901:5900"      
+    environment:
+      HUB_HOST: hub
+      HUB_PORT: 4444
+      NODE_MAX_INSTANCES: 5
+      NODE_MAX_SESSION: 5      
+    deploy:
+        mode: global
+    entrypoint: bash -c 'SE_OPTS="-host $$HOSTNAME" /opt/bin/entry_point.sh'
