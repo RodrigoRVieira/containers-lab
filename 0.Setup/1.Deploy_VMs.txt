@@ -28,3 +28,7 @@ vi ~/.bashrc
 
 #Adiciona o modo de execução aos Scripts
 chmod +x $(find  ./ -name *.sh)
+
+#Configura User/E-Mail @ GitHub
+git config --global --add user.name "<Nome>"
+git config --global --add user.mail "<E-Mail>"
