@@ -1,1 +1,0 @@
-docker service rm nginx
