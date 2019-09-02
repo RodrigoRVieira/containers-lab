@@ -15,9 +15,9 @@ printf " --rm                    ${GREEN} # Remove o Container ao sair do Termin
 printf " --name container_2      ${GREEN} # Determina o ID do Container${NC}\n"
 printf " --hostname container_2  ${GREEN} # Determina o nome do Host no Container${NC}\n"
 printf " --network host          ${GREEN} # Conecta o Container na rede do Host${NC}\n"
-printf " mcbacker/ubuntu:lab     ${GREEN} # Imagem composta por REPOSITORY:TAG${NC}\n"
+printf " rrvieira/ubuntu:1.0     ${GREEN} # Imagem composta por REPOSITORY:TAG${NC}\n"
 printf " bash                    ${GREEN} # Comando a ser executado${NC}\n\n"
 
-printf "docker run -it --rm --name container_2 --hostname container_2 --network host mcbacker/ubuntu:lab bash \n\n"
+printf "docker run -it --rm --name container_2 --hostname container_2 --network host rrvieira/ubuntu:1.0 bash \n\n"
 
-docker run -it --rm --name container_2 -h container_2 --network host mcbacker/ubuntu:lab bash
+docker run -it --rm --name container_2 -h container_2 --network host rrvieira/ubuntu:1.0 bash
