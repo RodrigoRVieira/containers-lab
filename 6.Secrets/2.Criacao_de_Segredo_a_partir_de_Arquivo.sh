@@ -12,7 +12,7 @@ printf " \ndocker \n"
 printf " secret               ${GREEN} # Command para manipulação de Segredos${NC}\n"
 printf " create               ${GREEN} # Option para a criação de Segredos${NC}\n"
 printf " connStringFromStdIn  ${GREEN} # Nome do Segredo${NC}\n"
-printf " connString.json      ${GREEN} # Nome do arquivo com os dados sensíves que irão compor o Segredo\n\n"
+printf " connString.json      ${GREEN} # Nome do arquivo com os dados sensíves que irão compor o Segredo${NC}\n\n"
 
 printf "docker secret create connStringFromFile connString.json"
 

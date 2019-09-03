@@ -1,0 +1,77 @@
+Terminal
+================================
+
+pwd	: Apresenta o diretório corrente
+cd - 	: Retorna para o diretório anterior à ultima mudança de diretório
+ls	: Lista o conteúdo do diretório
+more	: Exibe o conteúdo de um arquivo
+find	: Busca arquivos. Ex. find ./ -name *.sh
+chown	: Modifica o proprietário de um arquivo
+chmod	: Modifica os atributos de um arquivo
+mv	: Move um arquivo
+rm	: Remove um arquivo
+rm -r	: Remove um diretório
+mkdir	: Cria um diretório
+rmdir	: Remove um diretório vazio
+
+Docker
+================================
+
+docker ps		: Lista os containers em execução
+docker ps -a		: Lista todos os containers
+docker build		: Constrói uma nova imagem
+docker exec		: Executa um comando em um container já em execução
+docker pull		: Faz o download de uma imagem
+docker push		: Faz o upload de uma imagem
+docker tag		: Atribui uma TAG à uma imagem
+docker run		: Sobe um novo container
+docker rm		: Remove um container
+docker rm -f		: Remove um container em execução
+docker images		: Lista as imagens do host
+docker rmi		: Remove uma imagem do host
+docker rmi -f		: Remove uma imagem do host em uso por um container
+docker search		: Busca por imagens no Docker Hub
+docker logs		: Recupera o log de um container
+docker attach		: Atacha o console a um container
+docker volume ls	: Lista os volumes
+docker network ls	: Lista as redes
+docker service ls	: Lista os serviços
+docker secret ls	: Lista os segredos
+
+Vim / Vi
+================================
+
+ESC		: Alterna para o modo de comando (default)
+
+Em modo de comando:
+
+i		: Alterna para o modo de edição (insert)
+a		: Alterna para o modo de edição (append)
+A		: Alterna para o modo de edição movendo o cursor para o final da linha
+o		: Alterna para o modo de edição adicionando uma nova linha e movendo o cursor para o início dela
+x 		: Remove o caractere à direita
+dd 		: Recorta a linha colocando o conteúdo no buffer
+P		: Cola o conteúdo do buffer
+u		: Desfaz a última alteração
+CTRL + r	: Refaz a última alteração
+gg		: Move o cursor para a primeira linha do arquivo
+G		: Move o cursor para a última linha do arquivo
+:n		: Move o cursor para a linha n
+w		: Persiste as alterações no arquivo
+q!		: Sai do editor ignorando eventuais alterações no arquivo
+w		: Move o cursor para o início da próxima palavra
+e		: Move o cursor para o fim da palavra
+b		: Move o cursor para o início da palavra anterior
+
+:jumps		: Apresenta um histórico de posicionamento do cursor
+CTRL + o	: Move o cursor para a posição anterior
+CTRL + i	: Move o cursor para a posição posterior
+
+/		: Faz uma busca no arquivo
+n		: Pesquisa pela próxima ocorrência
+N		: Pesquisa pela ocorrência anterior
+
+set nu		: Exibe o número da linha
+colorscheme	: Altera o esquema de cores
+
+Para persistir as configurações, editar $HOME/.vimrc
