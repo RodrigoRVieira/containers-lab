@@ -1,1 +1,1 @@
-docker build . -f ./SeleniumGridConsole/Dockerfile
+docker build . -f ./SeleniumGridConsole/Dockerfile -t seleniumgridconsole:1.0
